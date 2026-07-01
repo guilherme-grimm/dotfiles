@@ -6,6 +6,8 @@
 **/node_modules/
 **/.pi-hermes-memory/
 **/projects-memory/
+**/pi-web-agent/
+**/state.json
 
 # --- editor / os cruft ---
 *.bak
