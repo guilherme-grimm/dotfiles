@@ -1,0 +1,14 @@
+# --- secrets / runtime state (never track these) ---
+**/auth.json
+**/sessions/
+**/*.db
+**/*.db-*
+**/node_modules/
+**/.pi-hermes-memory/
+**/projects-memory/
+
+# --- editor / os cruft ---
+*.bak
+*.bak.*
+*.swp
+.DS_Store

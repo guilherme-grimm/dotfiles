@@ -1,0 +1,35 @@
+{
+  "lastChangelogVersion": "0.80.3",
+  "defaultProvider": "oc-sdk-go",
+  "defaultModel": "glm-5.2",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-opencode-bridge",
+    "npm:pi-web-access",
+    "npm:pi-hermes-memory"
+  ],
+  "theme": "dark",
+  "enabledModels": [
+    "openai-codex/gpt-5.4-mini",
+    "openai-codex/gpt-5.3-codex-spark",
+    "oc-sdk-go/glm-5",
+    "oc-sdk-go/glm-5.1",
+    "oc-sdk-go/glm-5.2",
+    "oc-sdk-go/kimi-k2.5",
+    "oc-sdk-go/kimi-k2.6",
+    "oc-sdk-go/minimax-m3",
+    "oc-sdk-go/qwen3.7-max",
+    "oc-sdk-go/minimax-m2.5",
+    "oc-sdk-go/qwen3.7-plus",
+    "oc-sdk-go/qwen3.5-plus",
+    "oc-sdk-go/minimax-m2.7",
+    "oc-sdk-go/qwen3.6-plus",
+    "oc-sdk-go/deepseek-v4-flash",
+    "oc-sdk-go/deepseek-v4-pro",
+    "oc-sdk-go/kimi-k2.7-code",
+    "oc-sdk-go/mimo-v2.5",
+    "oc-sdk-go/mimo-v2-pro",
+    "oc-sdk-go/mimo-v2-omni",
+    "oc-sdk-go/mimo-v2.5-pro"
+  ]
+}

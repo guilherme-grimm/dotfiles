@@ -1,0 +1,98 @@
+[
+  // ============================================================
+  // DP-1 — Samsung vertical (1080px wide after rotation)
+  // Minimal set, icon-heavy
+  // ============================================================
+  {
+  "name": "vertical",
+  "output": "DVI-I-2",
+  "layer": "top",
+  "position": "top",
+  "height": 16,
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "custom/vpn",
+    "tray"
+  ],
+
+  "include": "~/.config/waybar/modules.jsonc"
+  },
+
+  // ============================================================
+  // HDMI-A-1 — Gigabyte 2K center (your primary, full setup)
+  // ============================================================
+  {
+    "name": "main",
+    "output": "DVI-I-1",
+    "layer": "top",
+    "position": "top",
+    "height": 16,
+
+    "modules-left": [
+      "custom/launcher",
+      "hyprland/workspaces",
+      "custom/updates",
+      "custom/cava"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "memory",
+      "cpu",
+      "temperature",
+      "idle_inhibitor",
+      "hyprland/language",
+      "keyboard-state",
+      "custom/sunset",
+      "pulseaudio",
+      "network",
+      "custom/vpn",
+      "custom/notification",
+      "tray"
+    ],
+
+    "include": "~/.config/waybar/modules.jsonc"
+  },
+
+  // ============================================================
+  // eDP-1 — Laptop (1920px, trimmed to avoid clamping)
+  // ============================================================
+  {
+    "name": "laptop",
+    "output": "eDP-1",
+    "layer": "top",
+    "position": "top",
+    "height": 16,
+
+    "modules-left": [
+      "custom/launcher",
+      "hyprland/workspaces",
+      "custom/updates"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "modules-right": [
+      "memory",
+      "cpu",
+      "temperature",
+      "battery",
+      "backlight",
+      "pulseaudio",
+      "network",
+      "tray"
+    ],
+
+    "include": "~/.config/waybar/modules.jsonc"
+  }
+]

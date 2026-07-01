@@ -1,0 +1,5 @@
+{
+  "provider": "exa",
+  "summaryModel": "oc-sdk-go/deepseek-v4-flash",
+  "workflow": "auto-summary"
+}
