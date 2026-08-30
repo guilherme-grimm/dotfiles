@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.80.3",
+  "lastChangelogVersion": "0.83.0",
   "defaultProvider": "oc-sdk-go",
   "defaultModel": "glm-5.2",
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "low",
   "packages": [
     "npm:pi-opencode-bridge",
     "npm:pi-web-access",

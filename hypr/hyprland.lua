@@ -58,7 +58,7 @@ hl.monitor({
 
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu        = "hyprlauncher"
+local menu        = "rofi -show drun"
 
 ----------------------------------------------------------------------------------
 -- AUTOSTART
@@ -314,8 +314,8 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) -- dwindle
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))
+hl.bind(mainMod .. " + G", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))
 -- browser and easy to use ones
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"))
 -- Fullscreen and similars
@@ -324,17 +324,15 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen
 -- Screenshot
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grimblast copy area && sleep 0.5"))
 
--- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left"  }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up"    }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down"  }))
+-- Move focus with mainMod + vim-style H/J/K/L (H=left, J=down, K=up, L=right)
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left"  }))
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down"  }))
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up"    }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 
--- Move active window (across monitors) with mainMod + SHIFT + arrow keys
-hl.bind(mainMod .. " + SHIFT + left",  hl.dsp.window.move({ direction = "left"  }))
-hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "up"    }))
-hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "down"  }))
+-- Switch workspaces with mainMod + SHIFT + H/L (prev/next)
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.focus({ workspace = "e+1" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]

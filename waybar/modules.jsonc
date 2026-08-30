@@ -206,12 +206,24 @@
     "smooth-scrolling-threshold": 1.0
   },
 
-  // Sunset
+  // Power button — quick shutdown with a confirm dialog
+  // (so a stray click won't kill your session).
+  // Swap on-click to "systemctl poweroff" for zero-confirm.
+  "custom/power": {
+    "format": "□",
+    "tooltip": "Shut down",
+    "on-click": "zenity --question --text='Shut down now?' --title='Power' && systemctl poweroff",
+    "on-click-right": "systemctl reboot"
+  },
+
+  // Sunset / night-light (blue-light filter shader)
+  // Left-click toggles on/off, right-click opens an intensity slider (zenity).
   "custom/sunset": {
     "interval": 2,
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/sunset.sh",
     "on-click": "~/.config/waybar/scripts/sunset.sh toggle",
+    "on-click-right": "~/.config/waybar/scripts/sunset.sh slider",
     "format": "{text}",
     "tooltip": true
   }

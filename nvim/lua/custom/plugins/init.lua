@@ -130,10 +130,38 @@ return {
     event = 'VeryLazy',
     opts = {},
     keys = {
-      { 's', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash' },
-      { 'S', mode = { 'n', 'x', 'o' }, function() require('flash').treesitter() end, desc = 'Flash Treesitter' },
-      { 'r', mode = 'o', function() require('flash').remote() end, desc = 'Remote Flash' },
-      { 'R', mode = { 'o', 'x' }, function() require('flash').treesitter_search() end, desc = 'Treesitter Search' },
+      {
+        's',
+        mode = { 'n', 'x', 'o' },
+        function()
+          require('flash').jump()
+        end,
+        desc = 'Flash',
+      },
+      {
+        'S',
+        mode = { 'n', 'x', 'o' },
+        function()
+          require('flash').treesitter()
+        end,
+        desc = 'Flash Treesitter',
+      },
+      {
+        'r',
+        mode = 'o',
+        function()
+          require('flash').remote()
+        end,
+        desc = 'Remote Flash',
+      },
+      {
+        'R',
+        mode = { 'o', 'x' },
+        function()
+          require('flash').treesitter_search()
+        end,
+        desc = 'Treesitter Search',
+      },
     },
   },
 
@@ -147,12 +175,29 @@ return {
       end,
     },
     keys = {
-      { 'zR', function() require('ufo').openAllFolds() end, desc = 'Open all folds' },
-      { 'zM', function() require('ufo').closeAllFolds() end, desc = 'Close all folds' },
-      { 'zK', function()
+      {
+        'zR',
+        function()
+          require('ufo').openAllFolds()
+        end,
+        desc = 'Open all folds',
+      },
+      {
+        'zM',
+        function()
+          require('ufo').closeAllFolds()
+        end,
+        desc = 'Close all folds',
+      },
+      {
+        'zK',
+        function()
           local winid = require('ufo').peekFoldedLinesUnderCursor()
-          if not winid then vim.lsp.buf.hover() end
-        end, desc = 'Peek fold / hover',
+          if not winid then
+            vim.lsp.buf.hover()
+          end
+        end,
+        desc = 'Peek fold / hover',
       },
     },
   },
@@ -180,5 +225,12 @@ return {
         lsp_doc_border = true,
       },
     },
+  },
+  {
+    'nvim-java/nvim-java',
+    config = function()
+      require('java').setup()
+      vim.lsp.enable 'jdtls'
+    end,
   },
 }

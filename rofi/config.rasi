@@ -1,0 +1,14 @@
+// rofi 2.0 configuration — Kanagawa Dragon rice
+// modes: drun (apps), window, run (commands)
+configuration {
+    modi: "drun,window,run";
+    show-icons: true;
+    icon-theme: "breeze-dark";
+    font: "FantasqueSansM Nerd Font 11";
+    display-drun: "  Apps";
+    display-window: "  Windows";
+    display-run: "  Run";
+    drun-display-format: "{name}";
+    window-format: "{w}  {c}  {t}";
+}
+@theme "~/.config/rofi/kanagawa.rasi"

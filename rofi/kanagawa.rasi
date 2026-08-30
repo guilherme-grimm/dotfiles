@@ -1,0 +1,53 @@
+// Kanagawa Dragon theme for rofi
+// palette: https://github.com/rebelot/kanagawa.nvim
+* {
+    bg:      rgba ( 28, 27, 38, 90 % );   // dragonBlack0-ish, translucent
+    bg-alt:  #1a1a22cc;
+    fg:      #c8c093ff;                   // oldWhite
+    accent:  #957fb8ff;                   // oniViolet
+    urgent:  #e46876ff;                   // samuraiRed
+    background-color: transparent;
+    text-color: @fg;
+}
+window {
+    width: 620px;
+    background-color: @bg;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 10px;
+    padding: 16px;
+}
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg-alt;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0px 0px 12px 0px;
+}
+prompt {
+    text-color: @accent;
+    margin: 0px 8px 0px 0px;
+}
+entry {
+    placeholder: "Search...";
+}
+listview {
+    lines: 8;
+    fixed-height: false;
+    scrollbar: false;
+}
+element {
+    padding: 8px;
+    border-radius: 8px;
+    spacing: 10px;
+}
+element selected {
+    background-color: @accent;
+    text-color: #1f1f28ff;               // sumiInk0
+}
+element-icon {
+    size: 24px;
+}
+element-text {
+    vertical-align: 0.5;
+}

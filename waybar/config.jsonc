@@ -1,11 +1,13 @@
 [
   // ============================================================
-  // DP-1 — Samsung vertical (1080px wide after rotation)
+  // HP 524pf 24" — vertical (1080px wide after rotation)
+  // Pinned by monitor description, not port name, so swapping
+  // docks/cables no longer puts this bar on the wrong screen.
   // Minimal set, icon-heavy
   // ============================================================
   {
   "name": "vertical",
-  "output": "DVI-I-2",
+  "output": "HP Inc. HP 524pf VNG5420L4G",
   "layer": "top",
   "position": "top",
   "height": 16,
@@ -21,18 +23,20 @@
     "pulseaudio",
     "network",
     "custom/vpn",
-    "tray"
+    "tray",
+    "custom/power"
   ],
 
   "include": "~/.config/waybar/modules.jsonc"
   },
 
   // ============================================================
-  // HDMI-A-1 — Gigabyte 2K center (your primary, full setup)
+  // Gigabyte GS27QA 27" 2K — center (your primary, full setup)
+  // Pinned by monitor description (survives port reassignments).
   // ============================================================
   {
     "name": "main",
-    "output": "DVI-I-1",
+    "output": "GIGA-BYTE TECHNOLOGY CO., LTD. GS27QA 0x000008D4",
     "layer": "top",
     "position": "top",
     "height": 16,
@@ -58,7 +62,8 @@
       "network",
       "custom/vpn",
       "custom/notification",
-      "tray"
+      "tray",
+      "custom/power"
     ],
 
     "include": "~/.config/waybar/modules.jsonc"
@@ -90,7 +95,8 @@
       "backlight",
       "pulseaudio",
       "network",
-      "tray"
+      "tray",
+      "custom/power"
     ],
 
     "include": "~/.config/waybar/modules.jsonc"

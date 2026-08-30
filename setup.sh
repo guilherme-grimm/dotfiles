@@ -72,6 +72,9 @@ printf 'repo:   %s\n' "$DOTFILES"
 printf '\n[hypr]\n'
 link "$DOTFILES/hypr" "$HOME/.config/hypr"
 
+printf '\n[rofi]\n'
+link "$DOTFILES/rofi" "$HOME/.config/rofi"
+
 printf '\n[waybar]\n'
 link "$DOTFILES/waybar" "$HOME/.config/waybar"
 
