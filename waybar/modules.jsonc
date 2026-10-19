@@ -123,7 +123,7 @@
       "car": "",
       "default": ["", ""]
     },
-    "on-click": "pavucontrol",
+    "on-click": "pwvucontrol",
     "on-scroll-up": "pamixer -ui 2",
     "on-scroll-down": "pamixer -ud 2"
   },
@@ -148,6 +148,7 @@
     "format": "{text}",
     "exec": "~/.config/waybar/scripts/vpn_status.sh",
     "on-click": "~/.config/waybar/scripts/vpn_status.sh --toggle",
+    "on-click-right": "~/.config/waybar/scripts/vpn_status.sh --menu",
     "interval": 5,
     "return-type": "json",
     "tooltip": true
