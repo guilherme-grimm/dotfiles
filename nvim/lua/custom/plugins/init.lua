@@ -18,20 +18,6 @@ return {
   },
   { 'sainnhe/gruvbox-material' },
   {
-    'supermaven-inc/supermaven-nvim',
-    event = 'InsertEnter',
-    config = function()
-      -- Ghost-text suggestions only in languages you already know.
-      -- For C/C++/TS/JS/Rust, learn via LSP + CodeCompanion instead of tab-accepting patterns.
-      local fluent = { go = true, gomod = true, gosum = true, lua = true, sh = true, bash = true, fish = true }
-      require('supermaven-nvim').setup {
-        condition = function()
-          return not fluent[vim.bo.filetype]
-        end,
-      }
-    end,
-  },
-  {
     'ray-x/go.nvim',
     dependencies = {
       'ray-x/guihua.lua',
